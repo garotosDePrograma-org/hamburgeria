@@ -6,11 +6,11 @@ const BILL_BURGER_CONFIG = {
     company: {
         name: 'Bill Burger',
         tagline: 'Hambúrgueres Artesanais',
-        phone: '(11) 99999-9999',
-        address: 'Rua das Delícias, 123 - Centro, São Paulo, SP',
+        phone: '(81) 99999-9999',
+        address: 'Travessa Julia Gomes, 00 - São Lourenço da Mata, PE',
         hours: {
-            weekdays: 'Seg-Sex: 18h-23h',
-            weekend: 'Sáb-Dom: 12h-23h'
+            weekdays: 'Ter-Sex: 18h-23h',
+            weekend: 'Sáb-Dom: 18h-23h'
         }
     },
 
@@ -31,7 +31,7 @@ const BILL_BURGER_CONFIG = {
     // Configurações do carrinho
     cart: {
         storageKey: 'billBurgerCart',
-        maxQuantity: 10,
+        maxQuantity: 20,
         autoSave: true
     },
 
@@ -59,7 +59,7 @@ const BILL_BURGER_CONFIG = {
 
     // Configurações de delivery (futuro)
     delivery: {
-        enabled: false,
+        enabled: true,
         minOrderValue: 25.00,
         deliveryFee: 5.00,
         freeDeliveryThreshold: 50.00
@@ -67,8 +67,8 @@ const BILL_BURGER_CONFIG = {
 
     // Configurações de pagamento (futuro)
     payment: {
-        enabled: false,
-        methods: ['pix', 'credit_card', 'debit_card'],
+        enabled: true,
+         methods: ['pix', 'credit_card', 'debit_card'],
         installments: 6
     }
 };

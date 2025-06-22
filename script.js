@@ -11,26 +11,18 @@ const MENU_DATA = {
     classicos: [
         {
             id: 'classic-burger',
-            name: 'Classic Burger',
+            name: 'Bill Simples',
             description: 'Hambúrguer tradicional com carne, alface, tomate, cebola e queijo',
-            price: 18.90,
+            price: 10.90,
             category: 'classicos',
             image: '🍔',
             popular: true
         },
         {
-            id: 'cheese-burger',
-            name: 'Cheese Burger',
-            description: 'Hambúrguer com queijo derretido, alface, tomate e molho especial',
-            price: 21.90,
-            category: 'classicos',
-            image: '🧀'
-        },
-        {
             id: 'bacon-burger',
-            name: 'Bacon Burger',
-            description: 'Hambúrguer com bacon crocante, queijo, alface e molho barbecue',
-            price: 24.90,
+            name: 'Bill Bacon',
+            description: 'Hambúrguer com bacon crocante, queijo, alface e molho especial',
+            price: 15.90,
             category: 'classicos',
             image: '🥓'
         }
@@ -38,48 +30,24 @@ const MENU_DATA = {
     especiais: [
         {
             id: 'double-burger',
-            name: 'Double Burger',
-            description: 'Dois hambúrgueres, queijo duplo, bacon e molho especial da casa',
-            price: 32.90,
+            name: 'Double Bill Simples',
+            description: 'Duas Carnes, queijo duplo, bacon e molho especial da casa',
+            price: 15.90,
             category: 'especiais',
             image: '🍔🍔',
             popular: true
         },
         {
-            id: 'bbq-burger',
-            name: 'BBQ Burger',
+            id: 'big-burger',
+            name: 'Big Bill',
             description: 'Hambúrguer com molho barbecue, cebola caramelizada e queijo gouda',
-            price: 28.90,
+            price: 18.90,
             category: 'especiais',
             image: '🔥'
         },
-        {
-            id: 'mushroom-burger',
-            name: 'Mushroom Burger',
-            description: 'Hambúrguer com cogumelos grelhados, queijo suíço e molho de ervas',
-            price: 26.90,
-            category: 'especiais',
-            image: '🍄'
-        }
+      
     ],
-    vegetariano: [
-        {
-            id: 'veggie-burger',
-            name: 'Veggie Burger',
-            description: 'Hambúrguer de grão-de-bico, quinoa e legumes frescos',
-            price: 22.90,
-            category: 'vegetariano',
-            image: '🥬'
-        },
-        {
-            id: 'falafel-burger',
-            name: 'Falafel Burger',
-            description: 'Hambúrguer de falafel com tahine, alface e tomate',
-            price: 20.90,
-            category: 'vegetariano',
-            image: '🌱'
-        }
-    ]
+   
 };
 
 // Classe principal da aplicação
@@ -403,7 +371,7 @@ ${items}
 
 *Total: ${CONFIG.currency} ${total.toFixed(2)}*
 
-Obrigado por escolher a Bill Burger! 🍔`;
+Obrigado por escolher a Bill Burger! `;
     }
 
     // Mostrar toast notification
