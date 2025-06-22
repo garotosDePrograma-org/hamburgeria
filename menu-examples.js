@@ -6,7 +6,7 @@ const EXPANDED_MENU_DATA = {
     classicos: [
         {
             id: 'classic-burger',
-            name: 'Classic Burger',
+            name: 'Bill Simples',
             description: 'Hambúrguer tradicional com carne, alface, tomate, cebola e queijo',
             price: 18.90,
             category: 'classicos',
@@ -14,16 +14,16 @@ const EXPANDED_MENU_DATA = {
             popular: true
         },
         {
-            id: 'cheese-burger',
-            name: 'Cheese Burger',
+            id: 'bacon-burger',
+            name: 'Bill Bacon',
             description: 'Hambúrguer com queijo derretido, alface, tomate e molho especial',
             price: 21.90,
             category: 'classicos',
             image: '🧀'
         },
         {
-            id: 'bacon-burger',
-            name: 'Bacon Burger',
+            id: 'big-bill',
+            name: 'Big Bill',
             description: 'Hambúrguer com bacon crocante, queijo, alface e molho barbecue',
             price: 24.90,
             category: 'classicos',
@@ -31,52 +31,52 @@ const EXPANDED_MENU_DATA = {
         }
     ],
     
-    especiais: [
-        {
-            id: 'double-burger',
-            name: 'Double Burger',
-            description: 'Dois hambúrgueres, queijo duplo, bacon e molho especial da casa',
-            price: 32.90,
-            category: 'especiais',
-            image: '🍔🍔',
-            popular: true
-        },
-        {
-            id: 'bbq-burger',
-            name: 'BBQ Burger',
-            description: 'Hambúrguer com molho barbecue, cebola caramelizada e queijo gouda',
-            price: 28.90,
-            category: 'especiais',
-            image: '🔥'
-        },
-        {
-            id: 'mushroom-burger',
-            name: 'Mushroom Burger',
-            description: 'Hambúrguer com cogumelos grelhados, queijo suíço e molho de ervas',
-            price: 26.90,
-            category: 'especiais',
-            image: '🍄'
-        }
-    ],
+    // especiais: [
+    //     {
+    //         id: 'double-burger',
+    //         name: 'Double Burger',
+    //         description: 'Dois hambúrgueres, queijo duplo, bacon e molho especial da casa',
+    //         price: 32.90,
+    //         category: 'especiais',
+    //         image: '🍔🍔',
+    //         popular: true
+    //     },
+    //     {
+    //         id: 'bbq-burger',
+    //         name: 'BBQ Burger',
+    //         description: 'Hambúrguer com molho barbecue, cebola caramelizada e queijo gouda',
+    //         price: 28.90,
+    //         category: 'especiais',
+    //         image: '🔥'
+    //     },
+    //     {
+    //         id: 'mushroom-burger',
+    //         name: 'Mushroom Burger',
+    //         description: 'Hambúrguer com cogumelos grelhados, queijo suíço e molho de ervas',
+    //         price: 26.90,
+    //         category: 'especiais',
+    //         image: '🍄'
+    //     }
+    // ],
     
-    vegetariano: [
-        {
-            id: 'veggie-burger',
-            name: 'Veggie Burger',
-            description: 'Hambúrguer de grão-de-bico, quinoa e legumes frescos',
-            price: 22.90,
-            category: 'vegetariano',
-            image: '🥬'
-        },
-        {
-            id: 'falafel-burger',
-            name: 'Falafel Burger',
-            description: 'Hambúrguer de falafel com tahine, alface e tomate',
-            price: 20.90,
-            category: 'vegetariano',
-            image: '🌱'
-        }
-    ],
+    // vegetariano: [
+    //     {
+    //         id: 'veggie-burger',
+    //         name: 'Veggie Burger',
+    //         description: 'Hambúrguer de grão-de-bico, quinoa e legumes frescos',
+    //         price: 22.90,
+    //         category: 'vegetariano',
+    //         image: '🥬'
+    //     },
+    //     {
+    //         id: 'falafel-burger',
+    //         name: 'Falafel Burger',
+    //         description: 'Hambúrguer de falafel com tahine, alface e tomate',
+    //         price: 20.90,
+    //         category: 'vegetariano',
+    //         image: '🌱'
+    //     }
+    // ],
 
     // NOVAS CATEGORIAS - Exemplos de expansão
 
@@ -130,14 +130,14 @@ const EXPANDED_MENU_DATA = {
             image: '🍟',
             popular: true
         },
-        {
-            id: 'batata-rustica',
-            name: 'Batata Rústica',
-            description: 'Batatas rústicas assadas com ervas e azeite',
-            price: 14.90,
-            category: 'acompanhamentos',
-            image: '🥔'
-        },
+        // {
+        //     id: 'batata-rustica',
+        //     name: 'Batata Rústica',
+        //     description: 'Batatas rústicas assadas com ervas e azeite',
+        //     price: 14.90,
+        //     category: 'acompanhamentos',
+        //     image: '🥔'
+        // },
         {
             id: 'onion-rings',
             name: 'Onion Rings',
@@ -146,78 +146,78 @@ const EXPANDED_MENU_DATA = {
             category: 'acompanhamentos',
             image: '🧅'
         },
-        {
-            id: 'nuggets',
-            name: 'Nuggets de Frango',
-            description: '6 nuggets de frango empanados com molho',
-            price: 13.90,
-            category: 'acompanhamentos',
-            image: '🍗'
-        }
+        // {
+        //     id: 'nuggets',
+        //     name: 'Nuggets de Frango',
+        //     description: '6 nuggets de frango empanados com molho',
+        //     price: 13.90,
+        //     category: 'acompanhamentos',
+        //     image: '🍗'
+        // }
     ],
 
-    combos: [
-        {
-            id: 'combo-classic',
-            name: 'Combo Classic',
-            description: 'Classic Burger + Batata Frita + Refrigerante',
-            price: 32.90,
-            category: 'combos',
-            image: '🍔🍟🥤',
-            popular: true,
-            originalPrice: 38.70, // Preço se comprado separadamente
-            savings: 5.80
-        },
-        {
-            id: 'combo-double',
-            name: 'Combo Double',
-            description: 'Double Burger + Batata Rústica + Milk Shake',
-            price: 48.90,
-            category: 'combos',
-            image: '🍔🍔🥔🥤',
-            originalPrice: 60.70,
-            savings: 11.80
-        },
-        {
-            id: 'combo-veggie',
-            name: 'Combo Veggie',
-            description: 'Veggie Burger + Batata Frita + Suco Natural',
-            price: 36.90,
-            category: 'combos',
-            image: '🥬🍟🍊',
-            originalPrice: 44.70,
-            savings: 7.80
-        }
-    ],
+    // combos: [
+    //     {
+    //         id: 'combo-classic',
+    //         name: 'Combo Classic',
+    //         description: 'Classic Burger + Batata Frita + Refrigerante',
+    //         price: 32.90,
+    //         category: 'combos',
+    //         image: '🍔🍟🥤',
+    //         popular: true,
+    //         originalPrice: 38.70, // Preço se comprado separadamente
+    //         savings: 5.80
+    //     },
+    //     {
+    //         id: 'combo-double',
+    //         name: 'Combo Double',
+    //         description: 'Double Burger + Batata Rústica + Milk Shake',
+    //         price: 48.90,
+    //         category: 'combos',
+    //         image: '🍔🍔🥔🥤',
+    //         originalPrice: 60.70,
+    //         savings: 11.80
+    //     },
+    //     {
+    //         id: 'combo-veggie',
+    //         name: 'Combo Veggie',
+    //         description: 'Veggie Burger + Batata Frita + Suco Natural',
+    //         price: 36.90,
+    //         category: 'combos',
+    //         image: '🥬🍟🍊',
+    //         originalPrice: 44.70,
+    //         savings: 7.80
+    //     }
+    // ],
 
-    sobremesas: [
-        {
-            id: 'brownie',
-            name: 'Brownie',
-            description: 'Brownie de chocolate com sorvete de baunilha',
-            price: 15.90,
-            category: 'sobremesas',
-            image: '🍫',
-            popular: true
-        },
-        {
-            id: 'sundae',
-            name: 'Sundae',
-            description: 'Sorvete com calda de chocolate, morango ou caramelo',
-            price: 13.90,
-            category: 'sobremesas',
-            image: '🍨',
-            options: ['Chocolate', 'Morango', 'Caramelo']
-        },
-        {
-            id: 'cheesecake',
-            name: 'Cheesecake',
-            description: 'Cheesecake de frutas vermelhas',
-            price: 16.90,
-            category: 'sobremesas',
-            image: '🧀'
-        }
-    ]
+    // sobremesas: [
+    //     {
+    //         id: 'brownie',
+    //         name: 'Brownie',
+    //         description: 'Brownie de chocolate com sorvete de baunilha',
+    //         price: 15.90,
+    //         category: 'sobremesas',
+    //         image: '🍫',
+    //         popular: true
+    //     },
+    //     {
+    //         id: 'sundae',
+    //         name: 'Sundae',
+    //         description: 'Sorvete com calda de chocolate, morango ou caramelo',
+    //         price: 13.90,
+    //         category: 'sobremesas',
+    //         image: '🍨',
+    //         options: ['Chocolate', 'Morango', 'Caramelo']
+    //     },
+    //     {
+    //         id: 'cheesecake',
+    //         name: 'Cheesecake',
+    //         description: 'Cheesecake de frutas vermelhas',
+    //         price: 16.90,
+    //         category: 'sobremesas',
+    //         image: '🧀'
+    //     }
+    // ]
 };
 
 // Exemplo de como adicionar novos filtros no HTML
