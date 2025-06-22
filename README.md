@@ -1,4 +1,4 @@
-# 🍔 [Bill Burger](https://garotosdeprograma-org.github.io/hamburgeria/) - Cardápio Online
+# 🍔 [Bill Burger - Cardápio Online](https://garotosdeprograma-org.github.io/hamburgeria/) 
 
 Sistema de cardápio online moderno e responsivo para a Bill Burger, desenvolvido com HTML, CSS e JavaScript puro.
 
