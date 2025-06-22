@@ -1,6 +1,6 @@
 // Configurações da aplicação
 const CONFIG = {
-    whatsappNumber: '5511999999999', // Substitua pelo número real
+    whatsappNumber: '5521975301714', // Substitua pelo número real
     whatsappMessage: 'Olá! Gostaria de fazer um pedido:',
     currency: 'R$',
     storageKey: 'billBurgerCart'
