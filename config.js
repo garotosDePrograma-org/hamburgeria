@@ -16,7 +16,7 @@ const BILL_BURGER_CONFIG = {
 
     // Configurações do WhatsApp
     whatsapp: {
-        number: '5511999999999', // Substitua pelo número real
+        number: '5521975301714', // Substitua pelo número real
         message: 'Olá! Gostaria de fazer um pedido:',
         formatMessage: true // Formatar automaticamente a mensagem
     },
