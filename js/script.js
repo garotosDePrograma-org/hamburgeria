@@ -15,7 +15,7 @@ const MENU_DATA = {
             description: 'Hambúrguer tradicional com carne, alface, tomate, cebola e queijo',
             price: 10.90,
             category: 'classicos',
-            image: '🍔',
+            image: '<img src="imgs/cardapio/hamburguer/bill-simples.png" alt="Hamburguer Simples" class="menu-item-img">',
             popular: true
         },
         {
@@ -24,26 +24,18 @@ const MENU_DATA = {
             description: 'Hambúrguer com bacon crocante, queijo, alface e molho especial',
             price: 15.90,
             category: 'classicos',
-            image: '🥓'
+            image: '<img src="imgs/cardapio/hamburguer/bill-bacon.png" alt="Hamburguer Bacon" class="menu-item-img">'
         }
     ],
     especiais: [
-        {
-            id: 'double-burger',
-            name: 'Double Bill Simples',
-            description: 'Duas Carnes, queijo duplo, bacon e molho especial da casa',
-            price: 15.90,
-            category: 'especiais',
-            image: '🍔🍔',
-            popular: true
-        },
+      
         {
             id: 'big-burger',
             name: 'Big Bill',
             description: 'Hambúrguer com molho barbecue, cebola caramelizada e queijo gouda',
             price: 18.90,
             category: 'especiais',
-            image: '🔥'
+            image: '<img src="imgs/cardapio/hamburguer/big-bill.png" alt="Harburger X-Tudo" class="menu-item-img">',
         },
       
     ],

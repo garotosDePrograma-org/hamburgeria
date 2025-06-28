@@ -61,16 +61,39 @@ body {
     align-items: center;
 }
 
-.logo{
+.logo {
     display: flex;
-    flex-direction: row;
-    align-items: start;
-    text-align: start;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s;
 }
 
-.logo img{
-    max-width: 10%;
-    min-width: 10%;
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo-text h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--white);
+    margin: 0;
+    line-height: 1.2;
+}
+
+.logo-text p {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.8);
+    margin: 0;
+    font-weight: 300;
 }
 
 .logo2 h1 {
@@ -254,6 +277,7 @@ body {
 }
 
 .menu-item-image {
+    
     height: 200px;
     background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
     display: flex;
@@ -262,6 +286,16 @@ body {
     font-size: 3rem;
     color: var(--white);
     position: relative;
+    overflow: hidden; 
+    
+}
+
+/* Estilos para as imagens dos itens do menu */
+.menu-item-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
 }
 
 /* Badge Popular */
@@ -616,6 +650,23 @@ body {
 
 /* Responsividade */
 @media (max-width: 768px) {
+    .logo {
+        gap: 0.8rem;
+    }
+    
+    .logo img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .logo-text h1 {
+        font-size: 1.5rem;
+    }
+    
+    .logo-text p {
+        font-size: 0.7rem;
+    }
+    
     .hero-content h2 {
         font-size: 2rem;
     }
@@ -649,6 +700,23 @@ body {
 }
 
 @media (max-width: 480px) {
+    .logo {
+        gap: 0.5rem;
+    }
+    
+    .logo img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .logo-text h1 {
+        font-size: 1.3rem;
+    }
+    
+    .logo-text p {
+        display: none; /* Esconde o subtítulo em telas muito pequenas */
+    }
+    
     .container {
         padding: 0 15px;
     }
