@@ -64,7 +64,8 @@ class BillBurgerApp {
         document.getElementById('cartBtn').addEventListener('click', () => this.toggleCart());
         document.getElementById('closeCart').addEventListener('click', () => this.toggleCart());
         document.getElementById('clearCart').addEventListener('click', () => this.clearCart());
-        document.getElementById('sendOrder').addEventListener('click', () => this.sendOrder());
+        // Alterado: agora abre o modal de dados do cliente
+        document.getElementById('sendOrder').addEventListener('click', () => this.openCustomerDataModal());
 
         // Filtros do menu
         document.querySelectorAll('.filter-btn').forEach(btn => {
@@ -80,11 +81,29 @@ class BillBurgerApp {
             }
         });
 
+        // Fechar modal de dados do cliente ao clicar fora
+        document.getElementById('customerDataModal').addEventListener('click', (e) => {
+            if (e.target.id === 'customerDataModal') {
+                this.closeCustomerDataModal();
+            }
+        });
+
         // Fechar modal com ESC
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
                 this.toggleCart();
+                this.closeCustomerDataModal();
             }
+        });
+
+        // Fechar modal de dados do cliente pelo botão
+        document.getElementById('closeCustomerData').addEventListener('click', () => this.closeCustomerDataModal());
+        document.getElementById('cancelCustomerData').addEventListener('click', () => this.closeCustomerDataModal());
+
+        // Submissão do formulário de dados do cliente
+        document.getElementById('customerDataForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            this.handleCustomerDataSubmit();
         });
     }
 
@@ -335,35 +354,75 @@ class BillBurgerApp {
         }
     }
 
-    // Enviar pedido via WhatsApp
-    sendOrder() {
+    // Abrir modal de dados do cliente
+    openCustomerDataModal() {
+        if (this.cart.length === 0) {
+            this.showToast('Adicione itens ao carrinho primeiro!', 'warning');
+            return;
+        }
+        document.getElementById('customerDataModal').classList.add('show');
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Fechar modal de dados do cliente
+    closeCustomerDataModal() {
+        document.getElementById('customerDataModal').classList.remove('show');
+        document.body.style.overflow = 'auto';
+    }
+
+    // Lidar com envio dos dados do cliente
+    handleCustomerDataSubmit() {
+        const name = document.getElementById('customerName').value.trim();
+        const address = document.getElementById('customerAddress').value.trim();
+        const payment = document.getElementById('customerPayment').value;
+        const obs = document.getElementById('customerObs').value.trim();
+
+        if (!name || !address || !payment) {
+            this.showToast('Preencha todos os campos obrigatórios!', 'warning');
+            return;
+        }
+
+        this.closeCustomerDataModal();
+        this.toggleCart(); // Fecha o carrinho
+        this.sendOrder({ name, address, payment, obs });
+    }
+
+    // Enviar pedido via WhatsApp (agora recebe dados do cliente)
+    sendOrder(customerData = null) {
         if (this.cart.length === 0) {
             this.showToast('Adicione itens ao carrinho primeiro!', 'warning');
             return;
         }
 
-        const message = this.formatWhatsAppMessage();
+        const message = this.formatWhatsAppMessage(customerData);
         const whatsappUrl = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`;
-        
         window.open(whatsappUrl, '_blank');
         this.showToast('Pedido enviado para o WhatsApp!');
     }
 
-    // Formatar mensagem do WhatsApp
-    formatWhatsAppMessage() {
+    // Formatar mensagem do WhatsApp (agora inclui dados do cliente)
+    formatWhatsAppMessage(customerData = null) {
         const items = this.cart.map(item => 
             `• ${item.name} x${item.quantity} - ${CONFIG.currency} ${(item.price * item.quantity).toFixed(2)}`
         ).join('\n');
 
         const total = this.cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-        
+
+        let customerInfo = '';
+        if (customerData) {
+            customerInfo = `*Nome:* ${customerData.name}\n*Endereço:* ${customerData.address}\n*Pagamento:* ${customerData.payment}`;
+            if (customerData.obs) {
+                customerInfo += `\n*Obs.:* ${customerData.obs}`;
+            }
+        }
+
         return `${CONFIG.whatsappMessage}
 
 ${items}
 
 *Total: ${CONFIG.currency} ${total.toFixed(2)}*
 
-Obrigado por escolher a Bill Burger! `;
+${customerInfo ? customerInfo + '\n\n' : ''}Obrigado por escolher a Bill Burger! `;
     }
 
     // Mostrar toast notification

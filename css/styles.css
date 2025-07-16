@@ -779,3 +779,38 @@ input:focus {
 .modal-body::-webkit-scrollbar-thumb:hover {
     background: var(--primary-dark);
 } 
+
+/* Modal de Dados do Cliente */
+#customerDataModal .modal-content {
+    max-width: 450px;
+}
+#customerDataModal .form-group {
+    margin-bottom: 1.2rem;
+}
+#customerDataModal label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: var(--secondary-color);
+}
+#customerDataModal input,
+#customerDataModal select,
+#customerDataModal textarea {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border: 1px solid var(--light-gray);
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+    background: var(--light-gray);
+    color: var(--secondary-color);
+    box-sizing: border-box;
+}
+#customerDataModal textarea {
+    resize: vertical;
+}
+#customerDataModal .cart-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.2rem;
+} 

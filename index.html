@@ -89,10 +89,51 @@
                     <div class="cart-actions">
                         <button class="btn-secondary" id="clearCart">Limpar Pedido</button>
                         <button class="btn-primary" id="sendOrder">
-                            <i class="fab fa-whatsapp"></i> Enviar Pedido
+                            <i class="fab fa-whatsapp"></i> Confirmar Pedido
                         </button>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Dados do Cliente -->
+    <div class="modal" id="customerDataModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Dados do Cliente</h3>
+                <button class="close-btn" id="closeCustomerData">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="customerDataForm">
+                    <div class="form-group">
+                        <label for="customerName">Nome:</label>
+                        <input type="text" id="customerName" name="customerName" required autocomplete="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="customerAddress">Endereço:</label>
+                        <input type="text" id="customerAddress" name="customerAddress" required autocomplete="street-address">
+                    </div>
+                    <div class="form-group">
+                        <label for="customerPayment">Forma de Pagamento:</label>
+                        <select id="customerPayment" name="customerPayment" required>
+                            <option value="">Selecione</option>
+                            <option value="Dinheiro">Dinheiro</option>
+                            <option value="Cartão">Cartão</option>
+                            <option value="Pix">Pix</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="customerObs">Observação:</label>
+                        <textarea id="customerObs" name="customerObs" rows="2" placeholder="Opcional"></textarea>
+                    </div>
+                    <div class="cart-actions">
+                        <button type="button" class="btn-secondary" id="cancelCustomerData">Cancelar</button>
+                        <button type="submit" class="btn-primary" id="submitCustomerData">
+                            <i class="fab fa-whatsapp"></i> Enviar Pedido
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
