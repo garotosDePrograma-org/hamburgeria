@@ -423,7 +423,7 @@ ${items}
 
 *Total: ${CONFIG.currency} ${total.toFixed(2)}*
 
-${customerInfo ? customerInfo + '\n\n' : ''}Obrigado por escolher a Bill's Burger! `;
+${customerInfo ? customerInfo + '\n\n' : ''}Obrigado por escolher a Bill's Burguer! `;
     }
 
     // Mostrar toast notification
