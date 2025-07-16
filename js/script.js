@@ -374,17 +374,18 @@ class BillBurgerApp {
     handleCustomerDataSubmit() {
         const name = document.getElementById('customerName').value.trim();
         const address = document.getElementById('customerAddress').value.trim();
+        const retirada = document.getElementById('customerRetirada').value;
         const payment = document.getElementById('customerPayment').value;
         const obs = document.getElementById('customerObs').value.trim();
 
-        if (!name || !address || !payment) {
+        if (!name || !address || !retirada || !payment) {
             this.showToast('Preencha todos os campos obrigatórios!', 'warning');
             return;
         }
 
         this.closeCustomerDataModal();
         this.toggleCart(); // Fecha o carrinho
-        this.sendOrder({ name, address, payment, obs });
+        this.sendOrder({ name, address, retirada, payment, obs });
     }
 
     // Enviar pedido via WhatsApp (agora recebe dados do cliente)
@@ -410,7 +411,7 @@ class BillBurgerApp {
 
         let customerInfo = '';
         if (customerData) {
-            customerInfo = `*Nome:* ${customerData.name}\n*Endereço:* ${customerData.address}\n*Pagamento:* ${customerData.payment}`;
+            customerInfo = `*Nome:* ${customerData.name}\n*Endereço:* ${customerData.address}\n*Retirada:* ${customerData.retirada}\n*Pagamento:* ${customerData.payment}`;
             if (customerData.obs) {
                 customerInfo += `\n*Obs.:* ${customerData.obs}`;
             }
@@ -422,7 +423,7 @@ ${items}
 
 *Total: ${CONFIG.currency} ${total.toFixed(2)}*
 
-${customerInfo ? customerInfo + '\n\n' : ''}Obrigado por escolher a Bill Burger! `;
+${customerInfo ? customerInfo + '\n\n' : ''}Obrigado por escolher a Bill's Burger! `;
     }
 
     // Mostrar toast notification

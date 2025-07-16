@@ -115,6 +115,14 @@
                         <input type="text" id="customerAddress" name="customerAddress" required autocomplete="street-address">
                     </div>
                     <div class="form-group">
+                        <label for="customerRetirada">Forma de Retirada:</label>
+                        <select name="customerRetirada" id="customerRetirada" required>
+                            <option value="" >Selecione</option>
+                            <option value="Retirada na Loja">Retirada na Loja</option>
+                            <option value="Entrega">Entrega</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
                         <label for="customerPayment">Forma de Pagamento:</label>
                         <select id="customerPayment" name="customerPayment" required>
                             <option value="">Selecione</option>
@@ -125,7 +133,7 @@
                     </div>
                     <div class="form-group">
                         <label for="customerObs">Observação:</label>
-                        <textarea id="customerObs" name="customerObs" rows="2" placeholder="Opcional"></textarea>
+                        <textarea id="customerObs" name="customerObs" rows="2" placeholder="Ex.: S/ cebola..."></textarea>
                     </div>
                     <div class="cart-actions">
                         <button type="button" class="btn-secondary" id="cancelCustomerData">Cancelar</button>
